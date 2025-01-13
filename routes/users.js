@@ -3,6 +3,9 @@ const router = express.Router();
 // Express reads top to bottom, so put your routes in order (static routes before dynamic routes).
 // Example, if we send a get request to /users/new, it hits the second route listed here rather than the dynamic route.
 
+// If we want to use some middleware ONLY here, we can declare it below and just call:
+/* router.use(logger) */
+
 // Don't need /users before everything because it's taken care of in server.js
 router.get("/", (req, res) => {
 	res.send("User List");
