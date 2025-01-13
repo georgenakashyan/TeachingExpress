@@ -8,15 +8,24 @@ const router = express.Router();
 
 // Don't need /users before everything because it's taken care of in server.js
 router.get("/", (req, res) => {
+	console.log(req.query.name);
 	res.send("User List");
 });
 
 router.get("/new", (req, res) => {
-	res.send("User New Form");
+	// You can pass information in json like this. It will show up in locals.firstName
+	res.render("users/new", { firstName: "test" });
 });
 
 router.post("/", (req, res) => {
-	res.send("Create User");
+	const isValid = true;
+	if (isValid) {
+		users.push({ firstName: req.body.firstName });
+		res.redirect(`/users/${users.length - 1}`);
+	} else {
+		console.log("Error");
+		res.render("users/new", { firstName: req.body.firstName });
+	}
 });
 
 // To add a dymanic route you can use a colon followed by the variable name
