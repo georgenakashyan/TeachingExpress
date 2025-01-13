@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
 	console.log("Here");
 	//res.send("hi");                               // Sending just a message
@@ -8,6 +10,7 @@ app.get("/", (req, res) => {
 	//res.status(401).send("error");                // Sending status and a message
 	//res.status(501).json({ message: "error" });   // Sending status code and json
 	//res.download("server.js");                    // Sending a file to be downloaded
+	res.render("index", { text: "world" });
 });
 
 app.listen(3000);
