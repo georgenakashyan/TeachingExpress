@@ -8,7 +8,6 @@ This repository serves as a beginner-friendly introduction to building web appli
 - Routing examples for GET and POST requests
 - Middleware implementation
 - Static file serving
-- Simple REST API demonstration
 
 ## Prerequisites
 
