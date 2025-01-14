@@ -1,6 +1,6 @@
 # Express.js Starter Project
 
-This repository serves as a beginner-friendly introduction to building web applications using **Express.js**, a minimal and flexible Node.js framework.
+This repository serves as a beginner-friendly introduction to building web applications using **Express.js**.
 
 ## Features
 
@@ -14,7 +14,7 @@ This repository serves as a beginner-friendly introduction to building web appli
 Before running the project, ensure that you have the following installed:
 
 - **Node.js** (v16 or later recommended)
-- **npm** or **yarn** (comes with Node.js)
+- **npm**
 
 ## Installation
 
@@ -47,7 +47,7 @@ Before running the project, ensure that you have the following installed:
 TeachingExpress/
 ├── public/             # Static files (HTML, CSS, JS)
 ├── routes/             # Modular route handlers
-├── views/              # View templates (if applicable)
+├── views/              # View templates
 ├── server.js           # Main application file
 └── README.md           # Project documentation
 ```
